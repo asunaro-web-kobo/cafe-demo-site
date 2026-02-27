@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あすなろCafe</title>
+  <meta name="description" content="美味しいスイーツとこだわりのコーヒーでくつろぎのひと時を過ごすカフェ">
+
+  <!-- リセットCSS -->
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+
+  <!-- オリジナルCSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">Cafe Demo</div>
+
+    <!-- ハンバーガー -->
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#concept">コンセプト</a>
+      <a href="#menu">メニュー</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#info">店舗情報</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="carousel">
+      <div class="slide"><img src="images/hero-images/shop-exterior.jpg" alt="外観"></div>
+      <div class="slide"><img src="images/hero-images/cafe-interior.jpg" alt="内観"></div>
+      <div class="slide"><img src="images/hero-images/hero-img-food.jpg" alt="カフェの食事"></div>
+    </div>
+    <h1 class="catch">気軽に立ち寄れる、ヨーロッパの小さなカフェ</h1>
+  </section>
+
+  <section id="concept" class="concept">
+    <h2>Concept</h2>
+    <div class="concept-card">
+      <p>旅先でふと見つけたような、<br>心がほどける時間を。</p>
+      <img src="images/concept-img.jpg" alt="お店のイメージ">
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>主なメニュー</h2>
+    <div class="menu-list">
+      <article class="menu-item">
+        <img src="images/menu/menu-drink.jpg" alt="drinks">
+        <h3>自家焙煎コーヒー</h3>
+        <p>香り高く、やさしい味わい。</p>
+      </article>
+      <article class="menu-item">
+        <img src="images/menu/menu-sweets.jpg" alt="sweets">
+        <h3>季節のスイーツ</h3>
+        <p>旬の果物をたっぷり使用。</p>
+      </article>
+      <article class="menu-item">
+        <img src="images/menu/menu-lunch.jpg" alt="lunch">
+        <h3>ランチメニュー</h3>
+        <p>ほっとする軽いランチ</p>
+      </article>
+    </div>
+    <div class="sns">
+      <p>Instagramで最新のメニューやお店の情報を更新中です。<br>フォローはこちら</p>
+      <a href="https://www.instagram.com/asunarowebkobo/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <small>※デモサイトのため、あすなろWEB工房のアカウントに遷移します</small>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>フォトギャラリー</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/gallery-1.jpg" alt="店内の様子">
+      <img src="images/gallery/gallery-2.jpg" alt="ショーケース">
+      <img src="images/gallery/gallery-3.jpg" alt="ショーケース">
+      <img src="images/gallery/gallery-4.jpg" alt="店内の様子">
+      <img src="images/gallery/gallery-5.jpg" alt="テーブルのイメージ">
+      <img src="images/gallery/gallery-6.jpg" alt="テーブルのイメージ">
+      <img src="images/gallery/gallery-7.jpg" alt="スイーツ">
+      <img src="images/gallery/gallery-8.jpg" alt="スイーツ">
+      <img src="images/gallery/gallery-9.jpg" alt="スイーツ">
+
+    </div>
+  </section>
+
+  <section id="info" class="info">
+    <h2>店舗情報</h2>
+    <p>〒000-0000 東京都○○区○○1-2-3</p>
+    <p>営業時間：10:00〜18:00（火曜定休）</p>
+    <p><a href="tel:000-0000-0000">TEL：000-0000-0000</a></p>
+    <div class="map">
+      <!-- Google Map 埋め込み -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8254544793112!2d139.7648771174439!3d35.6812996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1749710475119!5m2!1sja!2sjp"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="logo">Cafe Demo</div>
+    <a href="https://www.instagram.com/asunarowebkobo/" target="_blank" rel="noopener">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <p>© 2026 Cafe Demo</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
